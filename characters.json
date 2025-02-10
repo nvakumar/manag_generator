@@ -1,0 +1,14 @@
+{
+    "1": {
+        "name": "Yodha",
+        "appearance": "6.3 feet tall, muscular build, long flowing hair, intense eyes, battle-worn armor, wields a massive dragon slayer sword(male)",
+        "traits": "Fearless warrior, strategic, aggressive in battle, has a strong sense of justice(male)",
+        "profile_pic": "/static/profile_pics/profile_1.png"
+    },
+    "2": {
+        "name": "Shourya",
+        "appearance": "5.9 feet tall, lean but well-built, sharp facial features, tied-back hair, agile stance, wields two small swords(male)",
+        "traits": "Swift and tactical, calm but deadly, relies on speed and technique, honorable fighter(male)",
+        "profile_pic": "/static/profile_pics/profile_2.png"
+    }
+}

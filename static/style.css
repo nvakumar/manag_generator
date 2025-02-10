@@ -1,0 +1,80 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #1a1a1a, #2c2c2c);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Header */
+h1, h2 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    color: #4db8ff; /* Light Blue */
+}
+
+/* Buttons */
+button {
+    background-color: #4db8ff; /* Blue */
+    border: none;
+    color: black;
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #008ae6; /* Darker Blue */
+}
+
+/* Forms */
+form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left;
+}
+
+input[type="text"], input[type="number"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #3a3a3a;
+    color: white;
+}
+
+/* Character List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+/* Image Preview */
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #4db8ff;
+}
+
+a:hover {
+    color: #008ae6;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Created</title>
+</head>
+<body>
+    <h1>Character Created Successfully!</h1>
+    <p>Your character has been created with the key: <strong>{{ character_key }}</strong></p>
+    
+    <a href="/create_character">Create another character</a>
+
+    <h2>Generate Manga</h2>
+    <form action="/generate_manga" method="POST">
+        <label for="character_key">Enter Character Key:</label><br>
+        <input type="number" id="character_key" name="character_key" value="{{ character_key }}" required>
+        
+        <label for="story_prompt">Story Prompt:</label><br>
+        <input type="text" id="story_prompt" name="story_prompt" placeholder="Enter a short story scene..." required>
+        
+        <input type="submit" value="Generate Manga">
+    </form>
+</body>
+</html>
