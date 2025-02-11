@@ -4,22 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Character Created</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #d1d1d1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2 {
+            color: #4da6ff;
+        }
+        .container {
+            background-color: #2c2c2c;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+        }
+        a, button {
+            background-color: #4da6ff;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+        a:hover, button:hover {
+            background-color: #0073e6;
+        }
+    </style>
 </head>
 <body>
-    <h1>Character Created Successfully!</h1>
-    <p>Your character has been created with the key: <strong>{{ character_key }}</strong></p>
-    
-    <a href="/create_character">Create another character</a>
 
-    <h2>Generate Manga</h2>
-    <form action="/generate_manga" method="POST">
-        <label for="character_key">Enter Character Key:</label><br>
-        <input type="number" id="character_key" name="character_key" value="{{ character_key }}" required>
-        
-        <label for="story_prompt">Story Prompt:</label><br>
-        <input type="text" id="story_prompt" name="story_prompt" placeholder="Enter a short story scene..." required>
-        
-        <input type="submit" value="Generate Manga">
-    </form>
+    <div class="container">
+        <h1>🎉 Character Created Successfully! 🎉</h1>
+        <p>Your character "<strong>{{ character_key }}</strong>" has been created.</p>
+
+        <a href="/c_character">➕ Create Another Character</a>
+        <a href="/">🏠 Back to Home</a>
+    </div>
+
 </body>
 </html>

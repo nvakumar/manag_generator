@@ -1,80 +1,52 @@
-/* Global Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #1a1a1a, #2c2c2c);
-    color: white;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #d1d1d1;
     text-align: center;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
-
-/* Header */
-h1, h2 {
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-    color: #4db8ff; /* Light Blue */
+.logo {
+    width: 150px;
+    margin-top: 10px;
 }
-
-/* Buttons */
 button {
-    background-color: #4db8ff; /* Blue */
+    background-color: #4da6ff;
     border: none;
-    color: black;
-    padding: 12px 20px;
+    color: white;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    transition: 0.3s;
 }
-
 button:hover {
-    background-color: #008ae6; /* Darker Blue */
+    background-color: #0073e6;
 }
-
-/* Forms */
-form {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    display: inline-block;
-    text-align: left;
+.character-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-
-input[type="text"], input[type="number"] {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background: #3a3a3a;
-    color: white;
-}
-
-/* Character List */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    border-radius: 5px;
+.character-card {
+    background-color: #2c2c2c;
+    padding: 15px;
     margin: 10px;
+    width: 220px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(255, 255, 255, 0.2);
+    text-align: center;
 }
-
-/* Image Preview */
-img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+.character-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
-
-/* Links */
-a {
-    text-decoration: none;
-    color: #4db8ff;
-}
-
-a:hover {
-    color: #008ae6;
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+    .character-card {
+        width: 90%;
+    }
 }

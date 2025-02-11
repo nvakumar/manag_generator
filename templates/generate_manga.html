@@ -6,8 +6,25 @@
 </head>
 <body>
     <h1>🎨 Your Manga Scene is Ready! 🎨</h1>
-    <img src="{{ manga_image }}" alt="Generated Manga">
+
+    <!-- Display Generated Manga Image -->
+    <img src="{{ manga_image }}" alt="Generated Manga" class="manga-image">
+
+    <!-- Upload Reference Image for ControlNet -->
+    <form action="/generate_manga" method="post" enctype="multipart/form-data">
+        <label for="controlnet_image">Upload Reference Image (Optional):</label>
+        <input type="file" name="controlnet_image" id="controlnet_image" accept="image/*">
+        <br>
+        <button type="submit">Generate Again with Reference</button>
+    </form>
+
+    <!-- Inpainting Option (Edit Panel) -->
+    <form action="/edit_manga" method="post">
+        <input type="hidden" name="manga_image" value="{{ manga_image }}">
+        <button type="submit">✏️ Edit Panel (Inpainting)</button>
+    </form>
+
     <br>
-    <a href="/"><button>Back to Home</button></a>
+    <a href="/"><button>🏠 Back to Home</button></a>
 </body>
 </html>
