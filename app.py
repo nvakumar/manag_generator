@@ -52,7 +52,7 @@ def create_character():
             print(f"Sending request to Stable Diffusion with prompt: {prompt}")
 
             response = requests.post(
-                "http://127.0.0.1:7860/sdapi/v1/txt2img",  
+                "http://127.0.0.1:7860/sdapi/v1/txt2img",  # Stable Diffusion API URL
                 json={"prompt": prompt, "steps": 30, "cfg_scale": 7.5, "width": 512, "height": 512, "sampler_index": "Euler a"}
             )
 
@@ -74,16 +74,17 @@ def create_character():
             with open(image_path, "wb") as image_file:
                 image_file.write(image_decoded)
 
-            profile_pic_url = "/" + image_path.replace("\\", "/")  
+            profile_pic_url = "/" + image_path.replace("\\", "/")  # Fix path
 
         except Exception as e:
             flash(f"Error generating profile picture: {str(e)}", "error")
             return redirect(url_for('create_character'))
 
+        # Save character details with profile picture
         characters[character_id] = {"name": name, "appearance": appearance, "traits": traits, "profile_pic": profile_pic_url}
         save_characters(characters)
 
-        flash("Character created successfully!", "success")
+        flash("Character Created Successfully!", "success")
         return redirect(url_for('home'))
 
     return render_template('c_character.html')

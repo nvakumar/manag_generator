@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Character</title>
     <style>
         body {
@@ -43,24 +45,34 @@
         input[type="submit"]:hover {
             background-color: #0073e6;
         }
+        .success {
+            color: lightgreen;
+        }
+        .error {
+            color: red;
+        }
     </style>
 </head>
 <body>
 
     <h2>✨ Create a New Character ✨</h2>
-    
+
+    <!-- Display success or error messages -->
     {% if success %}
-        <p style="color: lightgreen;">Character Created Successfully! 🎉</p>
+        <p class="success">Character Created Successfully! 🎉</p>
+    {% endif %}
+    {% if error %}
+        <p class="error">{{ error }}</p>
     {% endif %}
 
     <form action="/c_character" method="post">
-        <label>Name:</label>
+        <label for="name">Name:</label>
         <input type="text" name="name" required>
         <br>
-        <label>Appearance:</label>
+        <label for="appearance">Appearance:</label>
         <input type="text" name="appearance" required>
         <br>
-        <label>Traits:</label>
+        <label for="traits">Traits:</label>
         <input type="text" name="traits" required>
         <br>
         <input type="submit" value="Create Character">
